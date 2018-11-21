@@ -80,7 +80,7 @@ public class Beat : MonoBehaviour {
            // this.transform.rotation = new Quaternion(0f, 0f, 0f, 1.0f);
             FindObjectOfType<Score>().AddPoint(1);
             Debug.Log(Count);
-            audio.clip = clips[0];
+            audio.clip = clips[1];
             audio.Play();
             FlagManager.Instance.flags[0] = false;
         }
@@ -88,7 +88,7 @@ public class Beat : MonoBehaviour {
         {
             this.transform.position = new Vector3(30.0f, 0f, 30.0f);
             FindObjectOfType<Score>().AddPoint(1);
-            audio.clip = clips[0];
+            audio.clip = clips[1];
             audio.Play();
             FlagManager.Instance.flags[1] = false;
         }
@@ -96,7 +96,7 @@ public class Beat : MonoBehaviour {
         {
             this.transform.position = new Vector3(30.0f, 0f, 30.0f);
             FindObjectOfType<Score>().AddPoint(1);
-            audio.clip = clips[0];
+            audio.clip = clips[1];
             audio.Play();
             FlagManager.Instance.flags[2] = false;
         }
@@ -104,7 +104,7 @@ public class Beat : MonoBehaviour {
         {
             this.transform.position = new Vector3(30.0f, 0f, 30.0f);
             FindObjectOfType<Score>().AddPoint(1);
-            audio.clip = clips[0];
+            audio.clip = clips[1];
             audio.Play();
             FlagManager.Instance.flags[3] = false;
         }
@@ -112,7 +112,7 @@ public class Beat : MonoBehaviour {
         {
             this.transform.position = new Vector3(30.0f, 0f, 30.0f);
             FindObjectOfType<Score>().AddPoint(1);
-            audio.clip = clips[0];
+            audio.clip = clips[1];
             audio.Play();
             FlagManager.Instance.flags[4] = false;
         }
@@ -120,7 +120,7 @@ public class Beat : MonoBehaviour {
         {
             this.transform.position = new Vector3(30.0f, 0f, 30.0f);
             FindObjectOfType<Score>().AddPoint(1);
-            audio.clip = clips[0];
+            audio.clip = clips[1];
             audio.Play();
             FlagManager.Instance.flags[5] = false;
         }
@@ -128,7 +128,7 @@ public class Beat : MonoBehaviour {
         {
             this.transform.position = new Vector3(30.0f, 0f, 30.0f);
             FindObjectOfType<Score>().AddPoint(1);
-            audio.clip = clips[0];
+            audio.clip = clips[1];
             audio.Play();
             FlagManager.Instance.flags[6] = false;
         }
@@ -136,7 +136,7 @@ public class Beat : MonoBehaviour {
         {
             this.transform.position = new Vector3(30.0f, 0f, 30.0f);
             FindObjectOfType<Score>().AddPoint(1);
-            audio.clip = clips[0];
+            audio.clip = clips[1];
             audio.Play();
             FlagManager.Instance.flags[7] = false;
         }
