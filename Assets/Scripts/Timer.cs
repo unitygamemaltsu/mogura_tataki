@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour {
         seconds = (int)timer;
         TimerText.text = seconds.ToString();
         if(seconds <= 0){
-            
+            StartGame.setLebel(0.2f);
             SceneManager.LoadScene("ResultScene");
         }
     }

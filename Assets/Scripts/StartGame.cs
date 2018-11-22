@@ -7,16 +7,18 @@ public class StartGame : MonoBehaviour
 {
 　  public AudioClip[] clips;
     AudioSource audio;
-    private float lebel;
+    public static float lebel = 0.8f;
 
-     public float Lebelchange{
-        get { return this.lebel; }
-        private set { this.lebel = value; }
+    public static float getLebel(){
+        return lebel;
     }
 
-    public void Setlevel(float setVal) {
-        Lebelchange = setVal;
+    public static void setLebel(float val) {
+        lebel -= val;
     }
+    // public void Setlevel(float setVal) {
+    //     Lebelchange = setVal;
+    // }
 
     public void ReplayGame()
     {

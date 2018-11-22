@@ -7,8 +7,6 @@ public class Beat : MonoBehaviour {
     public GameObject Mogura;
     private int Hole;
 
-    public StartGame startGame;
-
     Camera m_camera;
     public float Count;
     private float Bspeed;
@@ -21,11 +19,11 @@ public class Beat : MonoBehaviour {
 　　//public readonly static Beat Instance = new ();
 
     void Start () {
-        Bspeed = 40.0f;
+        Bspeed = 80.0f;
         Count = 0.0f;
         //startGame.Setlevel(0.8f);
         //Frequency = startGame.Lebelchange;
-        Frequency = 0.8f;
+        Frequency = StartGame.getLebel();
         m_camera = Camera.main;
         this.transform.position = new Vector3(30.0f, 0f, 30.0f);
         audio = GetComponent<AudioSource>();
@@ -45,7 +43,7 @@ public class Beat : MonoBehaviour {
 
             toushScreenPosition.z = 20.0f;
             Vector3 touchWorldPosition = Camera.main.ScreenToWorldPoint(toushScreenPosition);
-            touchWorldPosition.y = 10.0f;
+            touchWorldPosition.y = 20.0f;
 
             if(touchWorldPosition.x >=  10.0f){
                 touchWorldPosition.x = 10.0f;
@@ -144,7 +142,7 @@ public class Beat : MonoBehaviour {
         {
             this.transform.position = new Vector3(30.0f, 0f, 30.0f);
             FindObjectOfType<Score>().AddPoint(1);
-            audio.clip = clips[1];
+            audio.clip = clips[0];
             audio.Play();
             FlagManager.Instance.flags[8] = false;
         }
@@ -163,7 +161,7 @@ public class Beat : MonoBehaviour {
         {
             if (FlagManager.Instance.flags[0] == false)
             {
-                Instantiate(Mogura, new Vector3(5f, 0f, 0f), new Quaternion(0f, 90.0f, 0f,0f));
+                Instantiate(Mogura, new Vector3(7f, 0f, 0f), new Quaternion(0f, 90.0f, 0f,0f));
                 FlagManager.Instance.flags[0] = true;
                 //FindObjectOfType<Beat>().resetFlag(1);
                 Mogura.tag = "mogura1";
@@ -173,7 +171,7 @@ public class Beat : MonoBehaviour {
         {
             if (FlagManager.Instance.flags[1] == false)
             {
-                Instantiate(Mogura, new Vector3(-5f, 0f, 0f), new Quaternion(0f, 90.0f, 0f,0f));
+                Instantiate(Mogura, new Vector3(-7f, 0f, 0f), new Quaternion(0f, 90.0f, 0f,0f));
                 FlagManager.Instance.flags[1] = true;
                 Mogura.tag = "mogura2";
 
@@ -192,7 +190,7 @@ public class Beat : MonoBehaviour {
         {
             if (FlagManager.Instance.flags[3] == false)
             {
-                Instantiate(Mogura, new Vector3(5f, 0f, 5f), new Quaternion(0f, 90.0f, 0f,0f));
+                Instantiate(Mogura, new Vector3(7f, 0f, 7f), new Quaternion(0f, 90.0f, 0f,0f));
                 FlagManager.Instance.flags[3] = true;
                 Mogura.tag = "mogura4";
             }
@@ -201,7 +199,7 @@ public class Beat : MonoBehaviour {
         {
             if (FlagManager.Instance.flags[4] == false)
             {
-                Instantiate(Mogura, new Vector3(-5f, 0f, 5f), new Quaternion(0f, 90.0f, 0f,0f));
+                Instantiate(Mogura, new Vector3(-7f, 0f, 7f), new Quaternion(0f, 90.0f, 0f,0f));
                 FlagManager.Instance.flags[4] = true;
                 Mogura.tag = "mogura5";
             }
@@ -210,7 +208,7 @@ public class Beat : MonoBehaviour {
         {
             if (FlagManager.Instance.flags[5] == false)
             {
-                Instantiate(Mogura, new Vector3(0, 0f, 5f), new Quaternion(0f, 90.0f, 0f,0f));
+                Instantiate(Mogura, new Vector3(0, 0f, 7f), new Quaternion(0f, 90.0f, 0f,0f));
                 FlagManager.Instance.flags[5] = true;
                 Mogura.tag = "mogura6";
             }
@@ -219,7 +217,7 @@ public class Beat : MonoBehaviour {
         {
             if (FlagManager.Instance.flags[6] == false)
             {
-                Instantiate(Mogura, new Vector3(5f, 0f, -5f), new Quaternion(0f, 90.0f, 0f,0f));
+                Instantiate(Mogura, new Vector3(7f, 0f, -7f), new Quaternion(0f, 90.0f, 0f,0f));
                 FlagManager.Instance.flags[6] = true;
                 Mogura.tag = "mogura7";
             }
@@ -228,7 +226,7 @@ public class Beat : MonoBehaviour {
         {
             if (FlagManager.Instance.flags[7] == false)
             {
-                Instantiate(Mogura, new Vector3(-5f, 0f, -5f), new Quaternion(0f, 90.0f, 0f,0f));
+                Instantiate(Mogura, new Vector3(-7f, 0f, -7f), new Quaternion(0f, 90.0f, 0f,0f));
                 FlagManager.Instance.flags[7] = true;
                 Mogura.tag = "mogura8";
             }
@@ -237,7 +235,7 @@ public class Beat : MonoBehaviour {
         {
             if (FlagManager.Instance.flags[8] == false)
             {
-                Instantiate(Mogura, new Vector3(0, 0f, -5f), new Quaternion(0f, 90.0f, 0f,0f));
+                Instantiate(Mogura, new Vector3(0, 0f, -7f), new Quaternion(0f, 90.0f, 0f,0f));
                 FlagManager.Instance.flags[8] = true;
                 Mogura.tag = "mogura9";
             }
