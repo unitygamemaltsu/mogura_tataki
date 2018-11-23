@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 1297651409}
   - component: {fileID: 1297651408}
   m_Layer: 5
-  m_Name: Lebel Title
+  m_Name: Level Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -930,7 +930,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lebel
+  m_Text: Level
 --- !u!222 &1297651410
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -950,7 +950,7 @@ GameObject:
   - component: {fileID: 1540952901}
   - component: {fileID: 1540952902}
   m_Layer: 5
-  m_Name: Lebel
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1472,7 +1472,7 @@ GameObject:
   - component: {fileID: 1774950513}
   - component: {fileID: 1774950514}
   m_Layer: 5
-  m_Name: Lebel GUI
+  m_Name: Level GUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1508,10 +1508,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1774950512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef868d3b21d41b8935e8e9683a1a70, type: 3}
+  m_Script: {fileID: 11500000, guid: f0630ea12031646c0ad922f9e9b434de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lebelText: {fileID: 1540952901}
+  levelText: {fileID: 1540952901}
 --- !u!114 &1774950515
 MonoBehaviour:
   m_ObjectHideFlags: 0
