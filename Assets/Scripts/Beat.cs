@@ -23,7 +23,7 @@ public class Beat : MonoBehaviour {
         Count = 0.0f;
         //startGame.Setlevel(0.8f);
         //Frequency = startGame.Lebelchange;
-        Frequency = (float)StartGame.getLebel() / 10;
+        Frequency = (float)StartGame.getSpeed() / 10;
         m_camera = Camera.main;
         this.transform.position = new Vector3(30.0f, 0f, 30.0f);
         audio = GetComponent<AudioSource>();
