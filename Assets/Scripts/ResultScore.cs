@@ -10,7 +10,7 @@ public class ResultScore : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Debug.Log(Score.Instance.score);
-        resultScore = Score.Instance.score - 1;
+        resultScore = Score.Instance.score;
         resultText.text = resultScore.ToString();
 	}
 	

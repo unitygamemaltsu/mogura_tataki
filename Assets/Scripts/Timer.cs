@@ -8,6 +8,8 @@ public class Timer : MonoBehaviour {
     public Text TimerText;
     private float timer;
     int seconds;
+
+    
     //private float totalTime;
     // Use this for initialization
     void Start () {
@@ -22,13 +24,21 @@ public class Timer : MonoBehaviour {
         seconds = (int)timer;
         TimerText.text = seconds.ToString();
         if(seconds <= 0){
-            if (StartGame.getLebel() <= 2)
+            int lebel = StartGame.getLebel();
+            Debug.Log("レベル: " + lebel);
+            if (StartGame.upScores[lebel - 1] <= Score.Instance.score)
             {
-                StartGame.setLebel(8);
-            } else {
-                int setLebel = StartGame.getLebel() - 2;
-                StartGame.setLebel(setLebel);
+                StartGame.upLebel();
             }
+
+            // if (StartGame.getSpeed() <= 2)
+            // {
+            //     StartGame.setSpeed(8);
+            // } else {
+            //     int setLebel = StartGame.getSpeed() - 2;
+            //     StartGame.setSpeed(setLebel);
+            // }
+
             SceneManager.LoadScene("ResultScene");
         }
     }

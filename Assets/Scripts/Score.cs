@@ -22,6 +22,6 @@ public class Score : MonoBehaviour {
     }
     public void AddPoint(int point){
         score = score + point;
-        Score.Instance.score = score + point;
+        Score.Instance.score = score;
     }
 }
