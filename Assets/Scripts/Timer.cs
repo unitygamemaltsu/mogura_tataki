@@ -12,7 +12,8 @@ public class Timer : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //StartReset();
-        timer = 30.0f;
+        //timer = 30.0f;
+        timer = 5.0f;//debugmode
     }
 	
 	// Update is called once per frame
@@ -21,7 +22,13 @@ public class Timer : MonoBehaviour {
         seconds = (int)timer;
         TimerText.text = seconds.ToString();
         if(seconds <= 0){
-            StartGame.setLebel(0.2f);
+            if (StartGame.getLebel() <= 2)
+            {
+                StartGame.setLebel(8);
+            } else {
+                int setLebel = StartGame.getLebel() - 2;
+                StartGame.setLebel(setLebel);
+            }
             SceneManager.LoadScene("ResultScene");
         }
     }

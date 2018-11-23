@@ -23,7 +23,7 @@ public class Beat : MonoBehaviour {
         Count = 0.0f;
         //startGame.Setlevel(0.8f);
         //Frequency = startGame.Lebelchange;
-        Frequency = StartGame.getLebel();
+        Frequency = (float)StartGame.getLebel() / 10;
         m_camera = Camera.main;
         this.transform.position = new Vector3(30.0f, 0f, 30.0f);
         audio = GetComponent<AudioSource>();
@@ -43,7 +43,7 @@ public class Beat : MonoBehaviour {
 
             toushScreenPosition.z = 20.0f;
             Vector3 touchWorldPosition = Camera.main.ScreenToWorldPoint(toushScreenPosition);
-            touchWorldPosition.y = 20.0f;
+            touchWorldPosition.y = 15.0f;
 
             if(touchWorldPosition.x >=  10.0f){
                 touchWorldPosition.x = 10.0f;

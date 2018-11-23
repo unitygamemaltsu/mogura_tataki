@@ -24,9 +24,4 @@ public class Score : MonoBehaviour {
         score = score + point;
         Score.Instance.score = score + point;
     }
-    /*public static int getScore(){
-        result = score;
-        return result;
-    }*/
-
 }
