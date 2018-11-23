@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114989246824788486}
   m_Layer: 0
   m_Name: moguramotion
-  m_TagString: mogura7
+  m_TagString: mogura2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
