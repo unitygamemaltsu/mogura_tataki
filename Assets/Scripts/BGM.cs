@@ -13,19 +13,19 @@ public class BGM : MonoBehaviour {
 		audio = GetComponent<AudioSource>();
 		//audio.clip = clips[0];
         //audio.Play();
-		if(StartGame.getLebel() == 1){
+		if(StartGame.getLevel() == 1){
 		audio.clip = clips[0];
         audio.Play();
 		}
-		if(StartGame.getLebel() == 2){
+		if(StartGame.getLevel() == 2){
 		audio.clip = clips[1];
         audio.Play();
 		}
-		if(StartGame.getLebel() == 3){
+		if(StartGame.getLevel() == 3){
 		audio.clip = clips[2];
         audio.Play();
 		}
-		if(StartGame.getLebel() == 4){
+		if(StartGame.getLevel() == 4){
 		audio.clip = clips[2];
         audio.Play();
 		}

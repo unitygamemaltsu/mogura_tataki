@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Lebel : MonoBehaviour {
+public class Level : MonoBehaviour {
 
     // レベル表示
-    public Text lebelText;
-	void Start () {
-        lebelText.text = StartGame.getLebel().ToString();
-	}
+    public Text levelText;
+    void Start()
+    {
+        levelText.text = StartGame.getLevel().ToString();
+    }
 	
 	// Update is called once per frame
 	void Update () {

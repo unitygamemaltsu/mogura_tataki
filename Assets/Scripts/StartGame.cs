@@ -7,16 +7,16 @@ public class StartGame : MonoBehaviour
 {
 　  public AudioClip[] clips;
     AudioSource audio;
-    private static int lebel = 1;
+    private static int level = 1;
 
     // スピードの設定
     private static int[] speeds = new int[] {10, 8, 6, 4, 2}; // 確認用
     // 現在のスピードを設定
     private static int nowSpeed = speeds[0]; // 確認用
 
-    // レベルアップスコアの設定
-    public static int[] upScores = new int[] {2, 4, 5, 6, 7 };
-    //public static int lebel = 2;
+    // レベルアップスコアの設定かつレベル数の定義
+    public static int[] upScores = new int[] {10, 20, 27, 35};
+    //public static int level = 2;
     public static int getSpeed(){
         return nowSpeed;
     }
@@ -25,21 +25,21 @@ public class StartGame : MonoBehaviour
         nowSpeed = val;
     }
 
-    public static int getLebel() {
-        return lebel;
+    public static int getLevel() {
+        return level;
     }
 
-    public static void upLebel() {
+    public static void upLevel() {
         // レベルを上げスピードを2下げる
-        lebel += 1;
-        Debug.Log("Lebelup to " + lebel);
+        level += 1;
+        Debug.Log("Lebelup to " + level);
         // とりあえずテスト用として4を超えたらもとに戻るようにする
-        if (lebel > upScores.Length) {
-            lebel = 1;
-            Debug.Log("Lebelinit " + lebel);
+        if (level > upScores.Length) {
+            level = 1;
+            Debug.Log("Lebelinit " + level);
             nowSpeed = speeds[0];
         } else {
-            nowSpeed = speeds[lebel - 1];
+            nowSpeed = speeds[level - 1];
         }
     }
 
